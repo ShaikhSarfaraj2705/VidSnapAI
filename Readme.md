@@ -35,22 +35,22 @@ https://vidsnapai-psi.vercel.app/
 ## 📁 Project Structure
 
 
-VidSnapAI/
-│
-├── static/
-│   ├── css/
-│   ├── js/
-│   └── uploads/
-│
-├── templates/
-│   ├── index.html    
-│   ├── create.html
-│   └── gallery.html
-│
-├── main.py
-├── config.py
-├── requirements.txt
-├── README.md
+VidSnapAI/</br>
+│</br>
+├── static/</br>
+│   ├── css/</br>
+│   ├── js/</br>
+│   └── uploads/</br>
+│</br>
+├── templates/</br>
+│   ├── index.html </br>   
+│   ├── create.html</br>
+│   └── gallery.html</br>
+│</br>
+├── main.py</br>
+├── config.py</br>
+├── requirements.txt</br>
+├── README.md</br>
 
 
 📸 Screenshots
