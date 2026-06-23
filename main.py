@@ -7,6 +7,7 @@ from generate_process import create_reel
 
 UPLOAD_FOLDER = 'user_uploads'
 ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg'}
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
 
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
@@ -18,8 +19,12 @@ def home():
 
     reels = []
 
+    reels_folder = "static/reels"
+
     if os.path.exists(reels_folder):
         reels = sorted(os.listdir(reels_folder), reverse=True)[:3]
+    else:
+        reels = []
 
     return render_template("index.html", reels=reels)
 
