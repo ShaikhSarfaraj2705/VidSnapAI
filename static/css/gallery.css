@@ -1,0 +1,202 @@
+/* ================= GALLERY PAGE ================= */
+
+.gallery-container{
+    padding:70px 20px;
+    min-height:90vh;
+}
+
+.gallery-title{
+    text-align:center;
+    color:#fff;
+    font-size:46px;
+    font-weight:700;
+    margin-bottom:50px;
+    letter-spacing:.5px;
+}
+
+/* ================= GRID ================= */
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(330px,1fr));
+    gap:30px;
+}
+
+/* ================= VIDEO ================= */
+
+.gallery-grid video{
+    width:100%;
+    height:650px;
+    object-fit:cover;
+
+    border-radius:24px;
+    background:#000;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+    0 20px 40px rgba(0,0,0,.35);
+
+    transition:.4s ease;
+}
+
+.gallery-grid video:hover{
+    transform:translateY(-10px) scale(1.02);
+
+    border-color:#38bdf8;
+
+    box-shadow:
+    0 25px 55px rgba(0,0,0,.45),
+    0 0 25px rgba(56,189,248,.25);
+}
+
+/* ================= OPTIONAL CARD ================= */
+
+.gallery-item{
+    background:rgba(255,255,255,.05);
+    border:1px solid rgba(255,255,255,.08);
+    backdrop-filter:blur(20px);
+    border-radius:24px;
+    overflow:hidden;
+    transition:.35s;
+}
+
+.gallery-item:hover{
+    transform:translateY(-8px);
+}
+
+/* ================= REEL CARD ================= */
+
+.reel-card{
+    background:transparent;
+    border:none;
+    box-shadow:none;
+}
+
+.reel-thumbnail{
+    position:relative;
+    overflow:hidden;
+    border-radius:22px;
+}
+
+.reel-thumbnail img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.reel-thumbnail:hover img{
+    transform:scale(1.05);
+}
+
+/* ================= PLAY OVERLAY ================= */
+
+.play-overlay{
+    position:absolute;
+    inset:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(0,0,0,.45);
+
+    opacity:0;
+
+    transition:.35s;
+}
+
+.play-overlay i{
+    width:80px;
+    height:80px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    border-radius:50%;
+
+    background:linear-gradient(45deg,#06b6d4,#2563eb);
+
+    color:white;
+    font-size:28px;
+}
+
+.reel-thumbnail:hover .play-overlay{
+    opacity:1;
+}
+
+/* ================= INFO ================= */
+
+.reel-info{
+    padding:20px 10px;
+}
+
+.reel-info h3{
+    color:#fff;
+    font-size:22px;
+    margin-bottom:8px;
+}
+
+.reel-info p{
+    color:#cbd5e1;
+    margin:0;
+}
+
+/* ================= SCROLLBAR ================= */
+
+.gallery-grid video::-webkit-media-controls{
+    border-radius:0 0 22px 22px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media(max-width:992px){
+
+.gallery-title{
+    font-size:38px;
+}
+
+.gallery-grid{
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+}
+
+.gallery-grid video{
+    height:520px;
+}
+
+}
+
+@media(max-width:768px){
+
+.gallery-container{
+    padding:50px 15px;
+}
+
+.gallery-title{
+    font-size:32px;
+}
+
+.gallery-grid{
+    grid-template-columns:1fr;
+    gap:20px;
+}
+
+.gallery-grid video{
+    height:500px;
+}
+
+}
+
+@media(max-width:480px){
+
+.gallery-grid video{
+    height:420px;
+}
+
+.gallery-title{
+    font-size:28px;
+}
+
+}

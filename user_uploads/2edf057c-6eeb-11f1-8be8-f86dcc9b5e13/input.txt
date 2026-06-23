@@ -1,0 +1,10 @@
+file 'adventure1.jpg'
+duration 1
+file 'adventure2.jpg'
+duration 1
+file 'adventure3.jpg'
+duration 1
+file 'adventure4.jpg'
+duration 1
+file 'adventure5.jpg'
+duration 1
